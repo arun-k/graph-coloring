@@ -1,0 +1,27 @@
+# Create your views here.
+
+from django.http import HttpResponse
+from django.shortcuts import render_to_response
+import json
+def graph(request):
+    if request.method=='GET':
+        return render_to_response('graph.html')
+    if request.method=='POST':
+        node_adj_lst=request.POST['adj_list']
+        adj_lst=json.loads(node_adj_lst)
+        color_lst={0:0}
+        neighbr=False
+        for nod in range(1,len(adj_lst)):
+            for clr in range(0,10):
+                for ele in adj_lst[str(nod)]:
+                    if ele in color_lst and color_lst[ele]==clr:
+                        neighbr=True
+                        break
+                if not neighbr:
+                    color_lst[nod]=clr
+                    neighbr=False
+                    break
+                else:
+                    neighbr=False
+    return HttpResponse(json.dumps(color_lst))
+        

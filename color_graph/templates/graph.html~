@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GRAPH COLORING</title>
+    {% load static %}
+     <link rel='stylesheet' type='text/css' href="{% static 'graphstyle.css' %}">
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    
+  </head>
+  <body>
+  <h1 style="text-align:center; color:#DAA520; text-shadow: 5px 5px 3px #000000;"><b><i>GRAPH COLORING</b></i></h1>
+  <canvas id="mycanvas" width="800" height="500" style="background-color:#ffffff; border:solid; cursor:pointer;"></canvas>
+  <div>
+  	<form>
+  	<input id="vertex" type="button" value="Vertex" title="Mark the vertices"></input>
+  	<input id="edge" type="button" value="Edge" title="Draw the edges"></input>
+  	<input id="post_graph" type="button" value="Submit" title="Click to color graph"></input>
+  	<input id="clears" type="button" value="Clear" title="Clear screen"></input>
+	</form>
+  </div>
+  {% load static %}
+  <script src= "{% static 'paintscript.js' %}"> </script>
+
+  </body>
+</html>
