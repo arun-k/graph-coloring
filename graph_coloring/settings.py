@@ -1,6 +1,6 @@
 # Django settings for graph_coloring project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -102,7 +102,7 @@ ROOT_URLCONF = 'graph_coloring.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'graph_coloring.wsgi.application'
 
-TEMPLATE_DIRS = (#'/home/arun/Documents/graph_django/graph_coloring/color_graph/templates',
+TEMPLATE_DIRS = ('/home/arun/Documents/graph_django/graph_coloring/color_graph/templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
